@@ -68,6 +68,7 @@
             android:layout_height="87dp"
             tools:srcCompat="@tools:sample/avatars"
             android:layout_gravity="center_vertical"
+            android:src="@drawable/foto_carne"
             android:layout_marginLeft="20dp"/>
 
         <TextView

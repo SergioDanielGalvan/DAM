@@ -39,6 +39,7 @@
 
 
             <EditText
+                android:id="@+id/txtUsuario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Usuario"
@@ -49,16 +50,18 @@
                 android:background="@drawable/edittext_fondo_xml"
                 android:layout_marginBottom="5dp"/>
             <EditText
+                android:id="@+id/txtContraseña"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Contraseña"
-                android:inputType="text"
+                android:inputType="textPassword"
                 android:padding="12dp"
                 android:textColor="@color/green"
                 android:textColorHint="#88000000"
                 android:background="@drawable/edittext_fondo_xml"/>
 
             <Button
+                android:id="@+id/btnIniciarSesion"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
@@ -67,6 +70,7 @@
                 android:textColor="@color/green" />
 
             <Button
+                android:id="@+id/btnCancelar"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/white"
