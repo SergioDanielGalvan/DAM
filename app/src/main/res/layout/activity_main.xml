@@ -22,8 +22,6 @@
                 android:src="@drawable/slogan1"/>
 
 
-
-
         </FrameLayout>
 
         <LinearLayout
