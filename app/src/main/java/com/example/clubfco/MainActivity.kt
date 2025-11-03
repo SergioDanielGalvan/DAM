@@ -20,6 +20,10 @@ class MainActivity : AppCompatActivity() {
         val txtUsuario : EditText = findViewById<EditText>( R.id.txtUsuario)
         val txtContraseña : EditText = findViewById<EditText>( R.id.txtContraseña)
         val btnCancelar : Button = findViewById<Button>( R.id.btnCancelar)
+
+        // Credenciales, por ahora hardcodeadas
+        val strNombreUsuario : String = "Admin"
+        val strClaveUsuario : String = "123456"
         btnCancelar.setOnClickListener{
             Toast.makeText( this, "Boton Cancelar", Toast.LENGTH_SHORT ).show()
             // Pongo vacias a txtUsuario y txtContraseña
@@ -33,7 +37,13 @@ class MainActivity : AppCompatActivity() {
         btnCancelar.setOnClickListener{
             Toast.makeText( this, "Inicio Ok", Toast.LENGTH_SHORT ).show()
             // Verificar credenciales
-            // Enviar a activity menu
+            if ( txtUsuario.text.equals( strNombreUsuario ) && txtContraseña.text.equals( strClaveUsuario ) ) {
+                // Enviar a activity menu
+            }
+            else {
+                txtContraseña.setText("")
+                txtUsuario.requestFocus()
+            }
         }
     }
 }
