@@ -51,7 +51,7 @@
 
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/txtNroRecibo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="RECIBO N°  ..........."
@@ -63,7 +63,7 @@
             />
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/txtNroSocio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Socio N°:"
@@ -71,7 +71,7 @@
             android:layout_marginTop="60dp"/>
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/txtNombreSocio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Nombre:"
@@ -79,7 +79,7 @@
             android:layout_marginTop="80dp"/>
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/txtApellido"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Apellido:"
@@ -87,7 +87,7 @@
             android:layout_marginTop="100dp"/>
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/txtNroDNI"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="DNI:"
@@ -96,7 +96,7 @@
 
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/txtPagoRecibido"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Pago Recibido $:"
@@ -113,6 +113,7 @@
     </FrameLayout>
 
     <Button
+        android:id="@+id/btnImprimirTicket"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="IMPRIMIR TICKET"
@@ -125,6 +126,7 @@
     </Button>
 
     <Button
+        android:id="@+id/btnCancelar"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="CANCELAR"
@@ -137,6 +139,7 @@
     </Button>
 
     <Button
+        android:id="@+id/btnSalir"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="SALIR"
