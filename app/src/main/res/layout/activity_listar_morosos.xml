@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/listarmorosos"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".listar_morosos"
@@ -17,9 +16,9 @@
             android:id="@+id/txtTituloListadoMorosos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Listado de Morosos:"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="100dp"/>
+            android:text="@string/listado_de_morosos"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="20dp"/>
 
     </LinearLayout>
 </ScrollView>
