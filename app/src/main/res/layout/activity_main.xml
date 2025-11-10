@@ -2,7 +2,6 @@
 
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,7 +18,9 @@
                 android:layout_height="252dp"
                 android:scaleType="centerInside"
                 android:layout_gravity="center"
-                android:src="@drawable/slogan1"/>
+                android:src="@drawable/slogan1"
+                android:contentDescription = "ImagenClub"
+            />
 
 
         </FrameLayout>
@@ -41,22 +42,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Usuario"
+                android:autofillHints="Usuario"
                 android:inputType="text"
                 android:padding="12dp"
                 android:textColor="@color/green"
                 android:textColorHint="#88000000"
                 android:background="@drawable/edittext_fondo_xml"
                 android:layout_marginBottom="5dp"/>
+
             <EditText
-                android:id="@+id/txtContraseña"
+                android:id="@+id/txtClave"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/edittext_fondo_xml"
                 android:hint="Contraseña"
                 android:inputType="textPassword"
                 android:padding="12dp"
                 android:textColor="@color/green"
-                android:textColorHint="#88000000"
-                android:background="@drawable/edittext_fondo_xml"/>
+                android:textColorHint="#88000000" />
 
             <Button
                 android:id="@+id/btnIniciarSesion"
@@ -76,9 +79,10 @@
                 android:textColor="@color/green" />
 
             <ImageView
-                android:layout_width="446dp"
-                android:layout_height="244dp"
-                android:src="@drawable/estadio_ferro"/>
+                android:layout_width="410dp"
+                android:layout_height="188dp"
+                android:src="@drawable/estadio_ferro"
+                android:contentDescription = "PiedePagina_ImagenClub"/>
 
         </LinearLayout>
 

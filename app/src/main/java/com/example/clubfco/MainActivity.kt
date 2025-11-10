@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val txtUsuario : EditText = findViewById<EditText>( R.id.txtUsuario)
-        val txtContraseña : EditText = findViewById<EditText>( R.id.txtContraseña)
+        val txtClave : EditText = findViewById<EditText>( R.id.txtClave)
         val btnCancelar : Button = findViewById<Button>( R.id.btnCancelar)
 
         // Credenciales, por ahora hardcodeadas
@@ -26,9 +26,9 @@ class MainActivity : AppCompatActivity() {
         val strClaveUsuario : String = "123456"
         btnCancelar.setOnClickListener{
             Toast.makeText( this, "Boton Cancelar", Toast.LENGTH_SHORT ).show()
-            // Pongo vacias a txtUsuario y txtContraseña
+            // Pongo vacías a txtUsuario y txtContraseña
             // y el foco en txtContraseña
-            txtContraseña.setText("")
+            txtClave.setText("")
             txtUsuario.setText("")
             txtUsuario.requestFocus()
         }
@@ -37,12 +37,12 @@ class MainActivity : AppCompatActivity() {
         btnCancelar.setOnClickListener{
             Toast.makeText( this, "Inicio Ok", Toast.LENGTH_SHORT ).show()
             // Verificar credenciales
-            if ( txtUsuario.text.toString() == strNombreUsuario && txtContraseña.text.toString() == strClaveUsuario ) {
+            if ( txtUsuario.text.toString() == strNombreUsuario && txtClave.text.toString() == strClaveUsuario ) {
                 // Enviar a activity menu
                 val intent = Intent( this, menuActivity::class.java )
             }
             else {
-                txtContraseña.setText("")
+                txtClave.setText("")
                 txtUsuario.requestFocus()
             }
         }

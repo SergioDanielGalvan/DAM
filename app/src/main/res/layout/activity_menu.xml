@@ -28,7 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="60sp"
-        android:src="@drawable/MenuPrincipal" />
+        android:src="@drawable/menuprincipal" />
 
     <Button
         android:id="@+id/btnClientes"
