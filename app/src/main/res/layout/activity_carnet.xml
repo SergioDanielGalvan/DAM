@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/etiquetaverdecarnet"
         android:layout_marginTop="20dp"
+        android:contentDescription="etiqueta verde Carnet"
         android:layout_marginBottom="50dp">
 
     </ImageView>
@@ -30,6 +31,7 @@
             android:layout_height="46dp"
             android:background="#046C43"
             android:src="@drawable/barracarnet"
+            android:contentDescription="barra carnet"
             android:layout_marginBottom="30dp">
         </ImageView>
         <!-- <FrameLayout
@@ -69,6 +71,7 @@
             tools:srcCompat="@tools:sample/avatars"
             android:layout_gravity="center_vertical"
             android:src="@drawable/foto_carne"
+            android:contentDescription="foto Carne"
             android:layout_marginLeft="20dp"/>
 
         <TextView
