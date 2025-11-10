@@ -17,6 +17,8 @@ class MainActivity : AppCompatActivity() {
         val txtUsuario = findViewById<EditText>( R.id.txtUsuario)
         val txtClave = findViewById<EditText>( R.id.txtClave)
         val btnCancelar = findViewById<Button>( R.id.btnCancelar)
+        val iLimiteIntentos = 5
+        var iContador : Int = 0
 
         // Credenciales, por ahora hardcodeadas
         val strNombreUsuario = "Admin"
@@ -32,14 +34,20 @@ class MainActivity : AppCompatActivity() {
 
         val btnIniciarSesion = findViewById<Button>( R.id.btnIniciarSesion )
         btnIniciarSesion.setOnClickListener{
-            Toast.makeText( this, "Inicio Ok", Toast.LENGTH_SHORT ).show()
             // Verificar credenciales
             if ( txtUsuario.text.toString() == strNombreUsuario && txtClave.text.toString() == strClaveUsuario ) {
+                iContador = 0
+                Toast.makeText( this, "Inicio Ok", Toast.LENGTH_SHORT ).show()
                 // Enviar a activity menu
                 val intent = Intent( this, menuActivity::class.java )
                 startActivity( intent )
             }
             else {
+                iContador++
+                Toast.makeText( this, "Fallo Login", Toast.LENGTH_SHORT ).show()
+                if ( iContador > iLimiteIntentos ) {
+                    finishAffinity()
+                }
                 txtClave.setText("")
                 txtUsuario.requestFocus()
             }

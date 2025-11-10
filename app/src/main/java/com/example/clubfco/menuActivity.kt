@@ -1,6 +1,9 @@
 package com.example.clubfco
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -16,5 +19,14 @@ class menuActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        val btnSalir = findViewById<Button>( R.id.btnSalir)
+
+        btnSalir.setOnClickListener{
+            // Toast.makeText( this, "Boton Cancelar", Toast.LENGTH_SHORT ).show()
+            val intent = Intent( this, MainActivity::class.java )
+            startActivity( intent )
+        }
     }
+
 }
