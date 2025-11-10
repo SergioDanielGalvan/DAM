@@ -7,9 +7,6 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,8 +19,8 @@ class MainActivity : AppCompatActivity() {
         val btnCancelar : Button = findViewById<Button>( R.id.btnCancelar)
 
         // Credenciales, por ahora hardcodeadas
-        val strNombreUsuario : String = "Admin"
-        val strClaveUsuario : String = "123456"
+        val strNombreUsuario = "Admin"
+        val strClaveUsuario = "123456"
         btnCancelar.setOnClickListener{
             Toast.makeText( this, "Boton Cancelar", Toast.LENGTH_SHORT ).show()
             // Pongo vacías a txtUsuario y txtContraseña
@@ -34,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         val btnIniciarSesion : Button = findViewById<Button>( R.id.btnIniciarSesion)
-        btnCancelar.setOnClickListener{
+        btnIniciarSesion.setOnClickListener{
             Toast.makeText( this, "Inicio Ok", Toast.LENGTH_SHORT ).show()
             // Verificar credenciales
             if ( txtUsuario.text.toString() == strNombreUsuario && txtClave.text.toString() == strClaveUsuario ) {
