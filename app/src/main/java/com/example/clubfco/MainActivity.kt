@@ -14,9 +14,9 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        val txtUsuario : EditText = findViewById<EditText>( R.id.txtUsuario)
-        val txtClave : EditText = findViewById<EditText>( R.id.txtClave)
-        val btnCancelar : Button = findViewById<Button>( R.id.btnCancelar)
+        val txtUsuario = findViewById<EditText>( R.id.txtUsuario)
+        val txtClave = findViewById<EditText>( R.id.txtClave)
+        val btnCancelar = findViewById<Button>( R.id.btnCancelar)
 
         // Credenciales, por ahora hardcodeadas
         val strNombreUsuario = "Admin"
@@ -30,13 +30,14 @@ class MainActivity : AppCompatActivity() {
             txtUsuario.requestFocus()
         }
 
-        val btnIniciarSesion : Button = findViewById<Button>( R.id.btnIniciarSesion)
+        val btnIniciarSesion = findViewById<Button>( R.id.btnIniciarSesion )
         btnIniciarSesion.setOnClickListener{
             Toast.makeText( this, "Inicio Ok", Toast.LENGTH_SHORT ).show()
             // Verificar credenciales
             if ( txtUsuario.text.toString() == strNombreUsuario && txtClave.text.toString() == strClaveUsuario ) {
                 // Enviar a activity menu
                 val intent = Intent( this, menuActivity::class.java )
+                startActivity( intent )
             }
             else {
                 txtClave.setText("")
