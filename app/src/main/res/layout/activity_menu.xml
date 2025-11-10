@@ -31,7 +31,7 @@
         android:src="@drawable/MenuPrincipal" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnClientes"
         android:layout_width="300dp"
         android:layout_height="55dp"
         android:text="CLIENTES"
@@ -41,7 +41,7 @@
         android:layout_gravity="center"/>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnPagos"
         android:layout_width="300dp"
         android:layout_height="55dp"
         android:text="PAGOS"
@@ -51,7 +51,7 @@
         android:layout_gravity="center"/>
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnListarMorosos"
         android:layout_width="300dp"
         android:layout_height="55dp"
         android:text="LISTAR MOROSOS"
@@ -61,7 +61,7 @@
         android:layout_gravity="center"/>
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btnSalir"
         android:layout_width="300dp"
         android:layout_height="55dp"
         android:text="SALIR"

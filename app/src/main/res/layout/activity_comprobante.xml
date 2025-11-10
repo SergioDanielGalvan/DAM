@@ -51,7 +51,7 @@
 
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/txtNroSocio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="SOCIO N°  ..........."
@@ -63,7 +63,7 @@
             />
 
         <ImageView
-            android:id="@+id/imageView5"
+            android:id="@+id/imageSocio"
             android:layout_width="97dp"
             android:layout_height="87dp"
             tools:srcCompat="@tools:sample/avatars"
@@ -71,7 +71,7 @@
             android:layout_marginLeft="20dp"/>
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/txtNombreSocio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Nombre:"
@@ -79,7 +79,7 @@
             android:layout_marginTop="60dp"/>
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/txtApellidoSocio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Apellido:"
@@ -87,7 +87,7 @@
             android:layout_marginTop="80dp"/>
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/txtDNISocio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="DNI:"
@@ -95,7 +95,7 @@
             android:layout_marginTop="100dp"/>
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/txtFechaNacimientoSocio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Fecha de Nacimiento:"
@@ -108,6 +108,7 @@
     </FrameLayout>
 
     <Button
+        android:id="@+id/btnImprimirCarnet"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="IMPRIMIR"
@@ -120,6 +121,7 @@
     </Button>
 
     <Button
+        android:id="@+id/btnCancelarImprimirCarnet"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="CANCELAR"
@@ -132,6 +134,7 @@
     </Button>
 
     <Button
+        android:id="@+id/btnSalirImprimirCarnet"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="SALIR"

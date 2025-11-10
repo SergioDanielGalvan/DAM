@@ -37,8 +37,9 @@ class MainActivity : AppCompatActivity() {
         btnCancelar.setOnClickListener{
             Toast.makeText( this, "Inicio Ok", Toast.LENGTH_SHORT ).show()
             // Verificar credenciales
-            if ( txtUsuario.text.equals( strNombreUsuario ) && txtContraseña.text.equals( strClaveUsuario ) ) {
+            if ( txtUsuario.text.toString() == strNombreUsuario && txtContraseña.text.toString() == strClaveUsuario ) {
                 // Enviar a activity menu
+                val intent = Intent( this, menuActivity::class.java )
             }
             else {
                 txtContraseña.setText("")
