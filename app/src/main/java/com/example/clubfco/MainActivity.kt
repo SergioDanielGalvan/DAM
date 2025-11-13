@@ -35,11 +35,21 @@ class MainActivity : AppCompatActivity() {
         val btnIniciarSesion = findViewById<Button>( R.id.btnIniciarSesion )
         btnIniciarSesion.setOnClickListener{
             // Verificar credenciales
-            if ( txtUsuario.text.toString() == strNombreUsuario && txtClave.text.toString() == strClaveUsuario ) {
+            if ( txtUsuario.text.isEmpty() || txtClave.text.isEmpty() ) {
+                // Nada haremos!
+                if ( txtUsuario.text.isEmpty()  ) {
+                    txtUsuario.requestFocus()
+                }
+                else {
+                    txtClave.requestFocus()
+                }
+            }
+            else if ( txtUsuario.text.toString() == strNombreUsuario && txtClave.text.toString() == strClaveUsuario ) {
                 iContador = 0
-                Toast.makeText( this, "Inicio Ok", Toast.LENGTH_SHORT ).show()
+                Toast.makeText( this, "Inicio Ok, Usuario: " + txtUsuario.text.toString(), Toast.LENGTH_SHORT ).show()
                 // Enviar a activity menu
                 val intent = Intent( this, menuActivity::class.java )
+                intent.putExtra("Usuario", txtUsuario.text.toString())
                 startActivity( intent )
             }
             else {
