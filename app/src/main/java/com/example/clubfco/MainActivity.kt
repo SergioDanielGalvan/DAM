@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
                 iContador = 0
                 Toast.makeText( this, "Inicio Ok, Usuario: " + txtUsuario.text.toString(), Toast.LENGTH_SHORT ).show()
                 // Enviar a activity menu
-                val intent = Intent( this, menuActivity::class.java )
+                val intent = Intent( this, MenuPrincipalActivity::class.java )
                 intent.putExtra("Usuario", txtUsuario.text.toString())
                 startActivity( intent )
             }

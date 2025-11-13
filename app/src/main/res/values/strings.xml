@@ -2,4 +2,10 @@
     <string name="app_name">ClubFCO</string>
     <string name="listado_de_morosos">Listado de Morosos:</string>
     <string name="cancelar">Cancelar</string>
+    <string name="logo_menu_principal">logo menu Principal</string>
+    <string name="logo_club_mediano">logo Club mediano</string>
+    <string name="pagos">Pagos</string>
+    <string name="listar_morosos">Listar Morosos</string>
+    <string name="imagen_pie_de_pantalla">Imagen Pie de Pantalla</string>
+    <string name="clientes">Clientes</string>
 </resources>
