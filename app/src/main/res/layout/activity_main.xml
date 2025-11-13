@@ -22,7 +22,6 @@
                 android:contentDescription = "ImagenClub"
             />
 
-
         </FrameLayout>
 
         <LinearLayout
@@ -35,7 +34,6 @@
             android:paddingBottom="0dp"
             android:gravity="center_horizontal"
             >
-
 
             <EditText
                 android:id="@+id/txtUsuario"
@@ -75,7 +73,7 @@
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/white"
-                android:text="Cancelar"
+                android:text="@string/cancelar"
                 android:textColor="@color/green" />
 
             <ImageView
@@ -85,8 +83,6 @@
                 android:contentDescription = "PiedePagina_ImagenClub"/>
 
         </LinearLayout>
-
-
 
     </LinearLayout>
 

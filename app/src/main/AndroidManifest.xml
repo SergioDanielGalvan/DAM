@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ClubFCO">
         <activity
+            android:name=".ClientesActivity"
+            android:exported="false" />
+        <activity
             android:name=".listar_morosos"
             android:exported="false" />
         <activity

@@ -51,7 +51,6 @@
         android:backgroundTint="#D9D9D9">
 
 
-
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
@@ -59,20 +58,21 @@
             android:text="SOCIO N°  ..........."
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
-            android:textColor="@color/white"
+            android:textColor="@color/green"
             android:textSize="20dp"
             android:textStyle="bold"
             />
 
         <ImageView
-            android:id="@+id/imageView5"
+            android:id="@+id/imgFoto"
             android:layout_width="97dp"
             android:layout_height="87dp"
             tools:srcCompat="@tools:sample/avatars"
             android:layout_gravity="center_vertical"
-            android:src="@drawable/foto_carne"
+            android:src="@drawable/foto_carne2"
             android:contentDescription="foto Carne"
-            android:layout_marginLeft="20dp"/>
+            android:layout_marginLeft="20dp"
+            android:scaleType="fitXY"/>
 
         <TextView
             android:id="@+id/textView2"
@@ -136,6 +136,7 @@
     </Button>
 
     <Button
+        android:id="@+id/btnSalir"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="SALIR"

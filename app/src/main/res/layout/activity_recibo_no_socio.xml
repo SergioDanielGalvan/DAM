@@ -137,6 +137,7 @@
     </Button>
 
     <Button
+        android:id="@+id/btnSalir"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="SALIR"
