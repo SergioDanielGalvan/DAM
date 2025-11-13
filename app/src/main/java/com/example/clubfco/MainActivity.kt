@@ -9,6 +9,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
+    var iContador = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -18,7 +20,6 @@ class MainActivity : AppCompatActivity() {
         val txtClave = findViewById<EditText>( R.id.txtClave)
         val btnCancelar = findViewById<Button>( R.id.btnCancelar)
         val iLimiteIntentos = 5
-        var iContador : Int = 0
 
         // Credenciales, por ahora hardcodeadas
         val strNombreUsuario = "Admin"
