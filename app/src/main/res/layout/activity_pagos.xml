@@ -5,13 +5,12 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#046C43"
-    tools:context=".MenuPrincipalActivity">
-
+    android:orientation="vertical"
+    tools:context=".PagosActivity">
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="145dp">
+        android:layout_height="175dp">
 
         <ImageView
             android:layout_width="80dp"
@@ -21,69 +20,43 @@
             android:contentDescription="@string/logo_club_mediano"
             android:src="@drawable/logomediano" />
 
+
     </FrameLayout>
 
     <ImageView
-        android:id="@+id/imgMenuPrincipal"
+        android:id="@+id/imageView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10sp"
+        android:layout_marginBottom="60sp"
         android:contentDescription="@string/logo_menu_principal"
-        android:src="@drawable/menuprincipal" />
-
-    <TextView
-        android:id="@+id/Usuario"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:text="Usuario: " />
+        android:src="@drawable/MenuPrincipal" />
 
     <Button
-        android:id="@+id/btnClientes"
+        android:id="@+id/btnSocios"
         android:layout_width="300dp"
         android:layout_height="55dp"
-        android:text="@string/clientes"
+        android:text="Socios"
         android:layout_marginBottom="5sp"
         android:backgroundTint="@color/white"
         android:textColor="#046C43"
         android:layout_gravity="center"/>
 
     <Button
-        android:id="@+id/btnPagos"
+        android:id="@+id/btnNoSocios"
         android:layout_width="300dp"
         android:layout_height="55dp"
-        android:text="@string/pagos"
+        android:text="No Socios"
         android:layout_marginBottom="5sp"
         android:backgroundTint="@color/white"
         android:textColor="#046C43"
         android:layout_gravity="center"/>
 
-    <Button
-        android:id="@+id/btnListarMorosos"
-        android:layout_width="300dp"
-        android:layout_height="55dp"
-        android:text="@string/listar_morosos"
-        android:layout_marginBottom="5sp"
-        android:backgroundTint="@color/white"
-        android:textColor="#046C43"
-        android:layout_gravity="center"/>
-
-    <Button
-        android:id="@+id/btnSalir"
-        android:layout_width="300dp"
-        android:layout_height="55dp"
-        android:text="@string/cancelar"
-        android:layout_marginBottom="65sp"
-        android:backgroundTint="@color/white"
-        android:textColor="#046C43"
-        android:layout_gravity="center"/>
 
     <ImageView
+        android:paddingTop="80sp"
         android:id="@+id/imageView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:srcCompat="@drawable/imgslogan"
         android:contentDescription="@string/imagen_pie_de_pantalla" />
-
-
 </LinearLayout>

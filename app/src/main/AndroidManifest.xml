@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ClubFCO">
         <activity
+            android:name=".PagosActivity"
+            android:exported="false" />
+        <activity
             android:name=".MenuPrincipalActivity"
             android:exported="false" />
         <activity
@@ -31,9 +34,6 @@
             android:exported="false" />
         <activity
             android:name=".CarnetActivity"
-            android:exported="false" />
-        <activity
-            android:name=".menuActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

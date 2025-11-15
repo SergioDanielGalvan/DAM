@@ -8,4 +8,9 @@
     <string name="listar_morosos">Listar Morosos</string>
     <string name="imagen_pie_de_pantalla">Imagen Pie de Pantalla</string>
     <string name="clientes">Clientes</string>
+    <string name="piedepagina_imagenclub">PiedePagina_ImagenClub</string>
+    <string name="iniciar_sesi_n">Iniciar Sesión</string>
+    <string name="contrase_a">Contraseña</string>
+    <string name="usuario">Usuario</string>
+    <string name="imagenclub">ImagenClub</string>
 </resources>
