@@ -8,6 +8,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.appcompat.app.AlertDialog
 
 class MenuPrincipalActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,17 +21,39 @@ class MenuPrincipalActivity : AppCompatActivity() {
             insets
         }
 
-        val usuario = intent.getStringExtra("usuario" ) ?: "usuario"
-        val btnSalir = findViewById<Button>( R.id.btnSalir )
-        val txtUsuario = findViewById<TextView>( R.id.txtUsuario )
+        val usuario = intent.getStringExtra("Usuario") ?: "usuario"
+        val btnSalir = findViewById<Button>(R.id.btnSalir)
+        val btnSocios = findViewById<Button>(R.id.btnSocios)
+        val btnNoSocios = findViewById<Button>(R.id.btnNoSocios)
+        val btnListarMorosos = findViewById<Button>(R.id.btnListaVenceHoy)
 
-        txtUsuario.setText( txtUsuario.text.toString() + usuario )
+            btnSocios.setOnClickListener {
+                val intent = Intent(this, SociosActivity::class.java)
+                startActivity(intent)
 
-        btnSalir.setOnClickListener {
-            // Vuelta a Inicio
-            // Toast.makeText( this, "Boton Cancelar", Toast.LENGTH_SHORT ).show()
-            val intent = Intent( this, MainActivity::class.java )
-            startActivity( intent )
+            }
+
+            btnNoSocios.setOnClickListener {
+                val intent = Intent(this, PagoNoSociosActivity::class.java)
+                startActivity(intent)
+            }
+
+
+            val nombreUsuario = intent.getStringExtra("Usuario") ?: "usuario"
+            val txtUsuario = findViewById<TextView>(R.id.Usuario)
+            txtUsuario.text = "Bienvenido, $nombreUsuario"
+
+
+            btnSalir.setOnClickListener {
+                AlertDialog.Builder(this)
+                .setTitle("Cerrar Sesión")
+                .setMessage("¿Estás seguro de que deseas salir?")
+                    .setPositiveButton("Si") { _, _ ->
+                    finishAffinity()
+                }
+                .setNegativeButton("No", null)
+                .show()
+
+            }
         }
     }
-}

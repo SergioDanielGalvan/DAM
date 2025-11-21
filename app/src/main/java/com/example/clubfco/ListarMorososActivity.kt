@@ -9,31 +9,20 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class PagosActivity : AppCompatActivity() {
+class ListarMorososActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_pagos)
+        setContentView(R.layout.activity_listar_morosos)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        val btnSocios = findViewById<Button>(R.id.btnSocios)
-        btnSocios.setOnClickListener {
-            val intent = Intent(this, PagoSociosActivity::class.java)
-            startActivity(intent)
-
-        }
-
-        val btnNoSocios = findViewById<Button>(R.id.btnNoSocios)
-        btnNoSocios.setOnClickListener {
-            val intent = Intent(this, PagoNoSociosActivity::class.java)
-            startActivity(intent)
-        }
 
         val btnSalir = findViewById<Button>(R.id.btnSalir)
+
 
         btnSalir.setOnClickListener {
             AlertDialog.Builder(this)
@@ -44,6 +33,6 @@ class PagosActivity : AppCompatActivity() {
                 }
                 .setNegativeButton("No", null)
                 .show()
+            }
         }
     }
-}

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#046C43"
     android:orientation="vertical"
-    tools:context=".PagosActivity">
+    tools:context=".SociosActivity">
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="175dp">
@@ -19,27 +19,43 @@
             android:scaleType="centerCrop"
             android:contentDescription="@string/logo_club_mediano"
             android:src="@drawable/logomediano" />
-
-
     </FrameLayout>
 
-
-
     <Button
-        android:id="@+id/btnSocios1"
+        android:id="@+id/btnAltaSocio"
         android:layout_width="300dp"
         android:layout_height="55dp"
-        android:text="Socios"
+        android:text="Alta Socio"
         android:layout_marginBottom="5sp"
         android:backgroundTint="@color/white"
         android:textColor="#046C43"
         android:layout_gravity="center"/>
 
     <Button
-        android:id="@+id/btnNoSocios"
+        android:id="@+id/btnBajaSocio"
         android:layout_width="300dp"
         android:layout_height="55dp"
-        android:text="No Socios"
+        android:text="Baja Socio"
+        android:layout_marginBottom="5sp"
+        android:backgroundTint="@color/white"
+        android:textColor="#046C43"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/btnListaSocios"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:text="Lista Socios"
+        android:layout_marginBottom="5sp"
+        android:backgroundTint="@color/white"
+        android:textColor="#046C43"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/btnListaVenceHoy"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:text="Lista Vencen Hoy"
         android:layout_marginBottom="5sp"
         android:backgroundTint="@color/white"
         android:textColor="#046C43"
@@ -55,13 +71,18 @@
         android:textColor="#046C43"
         android:layout_gravity="center"/>
 
+    <Button
+        android:id="@+id/btnCargarSociosPrueba"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cargar socios de prueba"/>
 
     <ImageView
-        android:paddingTop="40sp"
         android:id="@+id/imageView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:srcCompat="@drawable/imgslogan"
+        android:paddingTop="40sp"
+        android:src="@drawable/imgslogan"
         android:contentDescription="@string/imagen_pie_de_pantalla" />
 </LinearLayout>
 
