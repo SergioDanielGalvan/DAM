@@ -20,4 +20,12 @@
     <string name="aranceles">Aranceles</string>
     <string name="agregar_actividad">Agregar Actividad</string>
     <string name="pago_actividades">Pago Actividades</string>
+    <string name="imprimir_ticket">Imprimir Ticket</string>
+    <string name="pago_recibido">Pago Recibido $:</string>
+    <string name="dni">DNI:</string>
+    <string name="apellido">Apellido:</string>
+    <string name="nombre">Nombre:</string>
+    <string name="socio_n">Socio N°:</string>
+    <string name="recibo_n">RECIBO N° ...........</string>
+    <string name="actividades">Actividades:</string>
 </resources>
