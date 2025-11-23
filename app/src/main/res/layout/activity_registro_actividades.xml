@@ -19,6 +19,15 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvRegistroActividades"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="8dp"/>
+        android:layout_height="484dp"
+        android:padding="8dp" />
+    <Button
+        android:id="@+id/btnSalir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/salir"
+        android:backgroundTint="#FFFFFF"
+        android:textColor="#046C43"
+        android:layout_margin="12dp" />
+
 </LinearLayout>

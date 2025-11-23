@@ -18,11 +18,20 @@
 
         <!-- Encabezado -->
         <ImageView
+            android:id="@+id/reciboactividades"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/etiquetaverderecibo"
+            android:src="@drawable/etiquetareciboactividades"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="30dp" />
+
+        <!-- Barra superior -->
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="top"
+            android:src="@drawable/barracarnet" />
 
         <!-- Recibo en tarjeta -->
         <androidx.cardview.widget.CardView
@@ -31,7 +40,7 @@
             android:layout_marginTop="10dp"
             app:cardCornerRadius="24dp"
             app:cardElevation="4dp"
-            android:backgroundTint="#FFFFFF">
+            android:backgroundTint="#D9D9D9">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -118,21 +127,14 @@
             android:textColor="@color/black"/>
 
         <Button
-            android:id="@+id/btnCancelar"
+            android:id="@+id/btnVolver"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="@string/cancelar"
+            android:text="@string/volver"
             android:layout_marginTop="15dp"
             android:backgroundTint="#FFFFFF"
             android:textColor="@color/black" />
 
-        <Button
-            android:id="@+id/btnSalir"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:text="@string/salir"
-            android:layout_marginTop="15dp"
-            android:backgroundTint="#FFFFFF"
-            android:textColor="@color/black" />
+
     </LinearLayout>
 </ScrollView>
