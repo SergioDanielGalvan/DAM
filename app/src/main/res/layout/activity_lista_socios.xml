@@ -5,7 +5,21 @@
     android:orientation="vertical"
     android:padding="16dp"
     android:background="#FFFFFF">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#046C43"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/txtTituloListadoSocios"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/listado_de_socios" />
+
+    </LinearLayout>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvSocios"
         android:layout_width="match_parent"

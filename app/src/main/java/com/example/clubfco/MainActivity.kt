@@ -64,5 +64,13 @@ class MainActivity : AppCompatActivity() {
                 txtUsuario.requestFocus()
             }
         }
+
+        val btnSalir = findViewById<Button>( R.id.btnSalir )
+        btnSalir.setOnClickListener {
+            // Salir de la aplicación
+            finishAffinity()
+        }
+
+
     }
 }
