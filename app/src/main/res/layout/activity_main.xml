@@ -6,8 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@color/green"
-        >
+        android:background="@color/green">
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -54,6 +53,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/edittext_fondo_xml"
                 android:hint="@string/contrase_a"
+                android:autofillHints="password"
                 android:inputType="textPassword"
                 android:padding="12dp"
                 android:textColor="@color/green"
