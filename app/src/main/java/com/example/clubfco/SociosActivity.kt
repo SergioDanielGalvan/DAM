@@ -5,6 +5,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import android.view.View
+import android.widget.RadioButton
+import android.widget.RadioGroup
 
 class SociosActivity : AppCompatActivity() {
     private lateinit var dbHelper: DBHelper
@@ -29,7 +32,7 @@ class SociosActivity : AppCompatActivity() {
             val inputNombre = EditText(this).apply { hint = "Nombre" }
             val inputApellido = EditText(this).apply { hint = "Apellido" }
             val inputDni = EditText(this).apply { hint = "DNI" }
-            val checkHabilitar = CheckBox(this).apply { text = "Confirmar alta de socio" }
+            val checkHabilitar = CheckBox(this).apply { text = "Apto Médico" }
 
             val layout = LinearLayout(this).apply {
                 orientation = LinearLayout.VERTICAL
@@ -86,21 +89,65 @@ class SociosActivity : AppCompatActivity() {
 
         // --- Pago Cuota
         btnPagoCuota.setOnClickListener {
-            val inputDni = EditText(this).apply { hint = "DNI del socio" }
-            val checkPago = CheckBox(this).apply { text = "Confirmar pago" }
 
-            val layout = LinearLayout(this).apply {
+            val context = this
+            val inputDni = EditText(context).apply { hint = "DNI del socio" }
+
+            //  MODIFICACIÓN Pago
+
+            // Efectivo vs Tarjeta
+            val labelMetodo = TextView(context).apply { text = "Método de Pago:"; setPadding(0, 20, 0, 0) }
+            val rgMetodo = RadioGroup(context).apply { orientation = RadioGroup.HORIZONTAL }
+            val rbEfectivo = RadioButton(context).apply { text = "Efectivo"; id = View.generateViewId(); isChecked = true }
+            val rbTarjeta = RadioButton(context).apply { text = "Tarjeta"; id = View.generateViewId() }
+
+            rgMetodo.addView(rbEfectivo)
+            rgMetodo.addView(rbTarjeta)
+
+            // Cuotas
+            val labelCuotas = TextView(context).apply { text = "Cuotas:"; visibility = View.GONE; setPadding(0, 10, 0, 0) }
+            val rgCuotas = RadioGroup(context).apply { orientation = RadioGroup.HORIZONTAL; visibility = View.GONE }
+            val rb3 = RadioButton(context).apply { text = "3 cuotas" }
+            val rb6 = RadioButton(context).apply { text = "6 cuotas" }
+
+            rgCuotas.addView(rb3)
+            rgCuotas.addView(rb6)
+
+            // muestra las cuotas y oculta.
+            rgMetodo.setOnCheckedChangeListener { _, checkedId ->
+                if (checkedId == rbTarjeta.id) {
+                    labelCuotas.visibility = View.VISIBLE
+                    rgCuotas.visibility = View.VISIBLE
+                    rb3.isChecked = true
+                } else {
+                    labelCuotas.visibility = View.GONE
+                    rgCuotas.visibility = View.GONE
+                    rgCuotas.clearCheck()
+                }
+            }
+            // FIN MODIFICACIÓN
+
+            val checkPago = CheckBox(context).apply { text = "Confirmar pago" }
+
+            val layout = LinearLayout(context).apply {
                 orientation = LinearLayout.VERTICAL
                 setPadding(50, 20, 50, 20)
                 addView(inputDni)
+                // Agregamos los elementos nuevos al layout antes del check de confirmar
+                addView(labelMetodo)
+                addView(rgMetodo)
+                addView(labelCuotas)
+                addView(rgCuotas)
                 addView(checkPago)
             }
 
-            AlertDialog.Builder(this)
+            AlertDialog.Builder(context)
                 .setTitle("Registrar Pago de Cuota")
                 .setView(layout)
                 .setPositiveButton("Registrar") { _, _ ->
                     val dni = inputDni.text.toString().trim()
+
+                    // Lógica original intacta
                     if (dni.isNotEmpty() && checkPago.isChecked) {
 
                         // 1. Buscar al socio por DNI
@@ -119,7 +166,7 @@ class SociosActivity : AppCompatActivity() {
                                 val socioActualizado = dbHelper.obtenerSocios().find { it.dni == dni }
 
                                 // 5. Preparar el Intent para abrir la actividad del recibo CON LOS DATOS NUEVOS
-                                val intent = Intent(this, ReciboCuotaActivity::class.java).apply {
+                                val intent = Intent(context, ReciboCuotaActivity::class.java).apply {
                                     putExtra("numeroSocio", socioActualizado?.numeroSocio ?: -1)
                                     putExtra("nombre", socioActualizado?.nombre)
                                     putExtra("apellido", socioActualizado?.apellido)
@@ -133,14 +180,14 @@ class SociosActivity : AppCompatActivity() {
                                 startActivity(intent)
 
                             } else {
-                                Toast.makeText(this, "El socio está al día con sus pagos.", Toast.LENGTH_LONG).show()
+                                Toast.makeText(context, "El socio está al día con sus pagos.", Toast.LENGTH_LONG).show()
                             }
                         } else {
-                            Toast.makeText(this, "Socio no encontrado con el DNI proporcionado.", Toast.LENGTH_LONG).show()
+                            Toast.makeText(context, "Socio no encontrado con el DNI proporcionado.", Toast.LENGTH_LONG).show()
                         }
 
                     } else {
-                        Toast.makeText(this, "Por favor, ingrese el DNI y confirme el pago", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(context, "Por favor, ingrese el DNI y confirme el pago", Toast.LENGTH_SHORT).show()
                     }
                 }
                 .setNegativeButton("Cancelar", null)
