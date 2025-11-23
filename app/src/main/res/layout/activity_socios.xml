@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#046C43"
+    android:orientation="vertical"
+    tools:context=".SociosActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="175dp">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="83dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/logo_club_mediano"
+            android:src="@drawable/logomediano" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btnAltaSocio"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:text="@string/alta_socio"
+        android:layout_marginBottom="5sp"
+        android:backgroundTint="@color/white"
+        android:textColor="#046C43"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/btnBajaSocio"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:text="@string/baja_socio"
+        android:layout_marginBottom="5sp"
+        android:backgroundTint="@color/white"
+        android:textColor="#046C43"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/btnListaSocios"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:text="@string/lista_socios"
+        android:layout_marginBottom="5sp"
+        android:backgroundTint="@color/white"
+        android:textColor="#046C43"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/btnListaVenceHoy"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:text="@string/lista_vencen_hoy"
+        android:layout_marginBottom="5sp"
+        android:backgroundTint="@color/white"
+        android:textColor="#046C43"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/btnPagoCuota"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:text="@string/pago_cuota"
+        android:layout_marginBottom="5sp"
+        android:backgroundTint="@color/white"
+        android:textColor="#046C43"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/btnSalir"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:text="@string/cancelar"
+        android:layout_marginBottom="65sp"
+        android:backgroundTint="@color/white"
+        android:textColor="#046C43"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/btnCargarSociosPrueba"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/cargar_socios_de_prueba"/>
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="40sp"
+        android:src="@drawable/imgslogan"
+        android:contentDescription="@string/imagen_pie_de_pantalla" />
+</LinearLayout>
+

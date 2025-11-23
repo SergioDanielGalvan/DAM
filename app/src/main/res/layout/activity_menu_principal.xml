@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#046C43"
+    tools:context=".MenuPrincipalActivity"
+    tools:ignore="ExtraText">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="145dp">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="83dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/logo_club_mediano"
+            android:src="@drawable/logomediano" />
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/imgMenuPrincipal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:contentDescription="@string/logo_menu_principal"
+        android:src="@drawable/menuprincipal" />
+
+    <TextView
+        android:id="@+id/Usuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Usuario: " />
+
+    <!-- Botón Socios -->
+    <Button
+        android:id="@+id/btnSocios"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:text="@string/socios"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="@color/white"
+        android:textColor="#046C43"
+        android:layout_gravity="center"/>
+
+    <!-- Botón No Socios -->
+    <Button
+        android:id="@+id/btnNoSocios"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:text="@string/no_socios"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="@color/white"
+        android:textColor="#046C43"
+        android:layout_gravity="center"/>
+
+    <!-- Botón Salir -->
+    <Button
+        android:id="@+id/btnSalir"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:text="@string/cancelar"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="65dp"
+        android:backgroundTint="@color/white"
+        android:textColor="#046C43"
+        android:layout_gravity="center"/>
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/imgslogan"
+        android:contentDescription="@string/imagen_pie_de_pantalla" />
+
+</LinearLayout>

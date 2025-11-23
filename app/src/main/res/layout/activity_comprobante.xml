@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    tools:context=".CarnetActivity"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/etiquetaverdecarnet"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="50dp">
+
+    </ImageView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:orientation="vertical"
+        android:background="#046C43">
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:background="#046C43"
+            android:src="@drawable/barracarnet"
+            android:layout_marginBottom="30dp">
+        </ImageView>
+        <!-- <FrameLayout
+            android:layout_width="380dp"
+            android:layout_height="180dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="60dp"
+            android:background="#D9D9D9">
+
+--><androidx.cardview.widget.CardView
+        android:layout_width="380dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="4dp"
+        android:backgroundTint="#D9D9D9">
+
+
+
+        <TextView
+            android:id="@+id/txtNroSocio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/socio_n"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:textColor="#046C43"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            />
+
+        <ImageView
+            android:id="@+id/imageSocio"
+            android:layout_width="97dp"
+            android:layout_height="87dp"
+            tools:srcCompat="@tools:sample/avatars"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:id="@+id/txtNombreSocio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nombre"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="60dp"/>
+
+        <TextView
+            android:id="@+id/txtApellidoSocio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/apellido"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="80dp"/>
+
+        <TextView
+            android:id="@+id/txtDNISocio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dni"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="100dp"/>
+
+        <TextView
+            android:id="@+id/txtFechaNacimientoSocio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fecha_de_nacimiento"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="120dp"/>
+
+
+
+    </androidx.cardview.widget.CardView>
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btnImprimirCarnet"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="@string/imprimir"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#046C43"
+        android:textColor="@color/white"
+        >
+
+    </Button>
+
+    <Button
+        android:id="@+id/btnCancelarImprimirCarnet"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="@string/cancelar"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="#046C43"
+        android:textColor="@color/white"
+        >
+
+    </Button>
+
+    <Button
+        android:id="@+id/btnSalirImprimirCarnet"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="@string/salir"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="#046C43"
+        android:textColor="@color/white"
+        >
+
+    </Button>
+
+</LinearLayout>

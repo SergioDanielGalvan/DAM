@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="#F0F0F0">
+
+    <TextView
+        android:id="@+id/tvNumero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#333333"
+        android:text="N° 000001" />
+
+    <TextView
+        android:id="@+id/tvNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="#555555"
+        android:text="Nombre Apellido" />
+
+    <TextView
+        android:id="@+id/tvDni"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#777777"
+        android:text="DNI: 12345678" />
+
+    <TextView
+        android:id="@+id/txtEstadoCuota"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Estado cuota:"
+        android:textStyle="bold"
+        android:paddingTop="4dp" />
+
+    <TextView
+        android:id="@+id/txtFechaUltimoPago"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Último pago:" />
+</LinearLayout>

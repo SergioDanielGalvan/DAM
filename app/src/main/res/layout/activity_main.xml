@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/green"
+        >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp">
+
+            <ImageView
+                android:layout_width="354dp"
+                android:layout_height="252dp"
+                android:scaleType="centerInside"
+                android:layout_gravity="center"
+                android:src="@drawable/slogan1"
+                android:contentDescription = "@string/imagenclub"
+            />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="16dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="0dp"
+            android:gravity="center_horizontal"
+            >
+
+            <EditText
+                android:id="@+id/txtUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/usuario"
+                android:autofillHints="Usuario"
+                android:inputType="text"
+                android:padding="12dp"
+                android:textColor="@color/green"
+                android:textColorHint="#88000000"
+                android:background="@drawable/edittext_fondo_xml"
+                android:layout_marginBottom="5dp"/>
+
+            <EditText
+                android:id="@+id/txtClave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_fondo_xml"
+                android:hint="@string/contrase_a"
+                android:inputType="textPassword"
+                android:padding="12dp"
+                android:textColor="@color/green"
+                android:textColorHint="#88000000" />
+
+            <Button
+                android:id="@+id/btnIniciarSesion"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="@color/white"
+                android:text="@string/iniciar_sesi_n"
+                android:textColor="@color/green" />
+
+            <Button
+                android:id="@+id/btnCancelar"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:text="@string/cancelar"
+                android:textColor="@color/green" />
+
+            <ImageView
+                android:layout_width="410dp"
+                android:layout_height="188dp"
+                android:src="@drawable/estadio_ferro"
+                android:contentDescription = "@string/piedepagina_imagenclub"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
